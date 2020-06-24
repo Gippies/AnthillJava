@@ -3,16 +3,24 @@ import javax.swing.JPanel;
 import java.awt.Graphics;
 
 public class Runner extends JPanel {
+
     public static void main(String[] args) {
         JFrame frame = new JFrame("Anthill Java");
-        frame.getContentPane().add(new Runner());
-        frame.setSize(1280, 720);
+        Runner runner = new Runner();
+        frame.setContentPane(runner);
+        frame.setSize(Constants.SCREEN_WIDTH, Constants.SCREEN_HEIGHT);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
         frame.setResizable(false);
+
+        while (true) {
+            // Perform Update Logic
+            runner.repaint();
+        }
     }
 
     public void paint(Graphics g) {
-        g.drawLine(10, 10, 1280, 720);
+        super.paint(g);
+        // Draw Stuff Here
     }
 }
