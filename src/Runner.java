@@ -4,6 +4,8 @@ import java.awt.Graphics;
 
 public class Runner extends JPanel {
 
+    private Simulation simulation;
+
     public static void main(String[] args) {
         JFrame frame = new JFrame("Anthill Java");
         Runner runner = new Runner();
@@ -13,14 +15,16 @@ public class Runner extends JPanel {
         frame.setVisible(true);
         frame.setResizable(false);
 
+        runner.simulation = new Simulation();
+
         while (true) {
-            // Perform Update Logic
+            runner.simulation.update();
             runner.repaint();
         }
     }
 
     public void paint(Graphics g) {
         super.paint(g);
-        // Draw Stuff Here
+        simulation.paint(g);
     }
 }
