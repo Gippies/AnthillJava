@@ -1,5 +1,6 @@
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import java.awt.Color;
 import java.awt.Graphics;
 
 public class Runner extends JPanel {
@@ -9,6 +10,7 @@ public class Runner extends JPanel {
     public static void main(String[] args) {
         JFrame frame = new JFrame("Anthill Java");
         Runner runner = new Runner();
+        runner.setBackground(Color.BLACK);
         frame.setContentPane(runner);
         frame.setSize(Constants.SCREEN_WIDTH, Constants.SCREEN_HEIGHT);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
