@@ -1,7 +1,7 @@
 package util;
 
 public class Vector2 {
-    private float x, y;
+    private final float x, y;
     public Vector2(float x, float y) {
         this.x = x;
         this.y = y;
@@ -9,6 +9,14 @@ public class Vector2 {
 
     public String toString() {
         return "x: " + x + "y: " + y;
+    }
+
+    public float getX() {
+        return x;
+    }
+
+    public float getY() {
+        return y;
     }
 
     public Vector2 add(Vector2 v) {
@@ -37,7 +45,7 @@ public class Vector2 {
 
     public Vector2 getNormalizedVector() {
         float normal = getNormal();
-        if (normal > 0.0) {
+        if (normal > 0.0f) {
             return div(normal);
         }
         else {
