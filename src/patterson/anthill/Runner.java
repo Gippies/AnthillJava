@@ -1,4 +1,6 @@
-import util.Constants;
+package patterson.anthill;
+
+import patterson.anthill.util.Constants;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;

@@ -1,7 +1,7 @@
-package creature.ant;
+package patterson.anthill.creature.ant;
 
-import util.GraphicComponent;
-import util.Vector2;
+import patterson.anthill.util.GraphicComponent;
+import patterson.anthill.util.Vector2;
 
 import java.awt.Graphics;
 import java.util.Random;

@@ -1,9 +1,9 @@
-package group;
+package patterson.anthill.group;
 
-import creature.ant.Ant;
-import creature.ant.Role;
-import util.Constants;
-import util.Vector2;
+import patterson.anthill.creature.ant.Ant;
+import patterson.anthill.creature.ant.Role;
+import patterson.anthill.util.Constants;
+import patterson.anthill.util.Vector2;
 
 import java.awt.Color;
 import java.awt.Graphics;

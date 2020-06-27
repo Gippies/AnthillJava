@@ -1,4 +1,4 @@
-package util;
+package patterson.anthill.util;
 
 import java.awt.Graphics;
 

@@ -1,4 +1,6 @@
-import group.Colony;
+package patterson.anthill;
+
+import patterson.anthill.group.Colony;
 
 import java.awt.Graphics;
 

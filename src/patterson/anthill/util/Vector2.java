@@ -1,4 +1,4 @@
-package util;
+package patterson.anthill.util;
 
 public class Vector2 {
     private final float x, y;

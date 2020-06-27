@@ -1,4 +1,4 @@
-package creature.ant;
+package patterson.anthill.creature.ant;
 
 import java.awt.Color;
 
