@@ -9,5 +9,5 @@ public interface GraphicComponent {
     int width = 0;
     int height = 0;
     void paint(Graphics g);
-    void update();
+    void update(long d);
 }

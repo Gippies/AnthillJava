@@ -21,7 +21,7 @@ public class Colony {
 
         Role gathererRole = new Role("Gatherer", Color.WHITE);
         for (int i = 0; i < INITIAL_NUMBER_OF_GATHERERS; i++) {
-            ants.add(new Ant(new Vector2(Constants.SCREEN_WIDTH / 2.0f, Constants.SCREEN_HEIGHT / 2.0f), gathererRole, 0.1f));
+            ants.add(new Ant(new Vector2(Constants.SCREEN_WIDTH / 2.0f, Constants.SCREEN_HEIGHT / 2.0f), gathererRole, 0.0001f));
         }
     }
 
@@ -31,9 +31,9 @@ public class Colony {
         }
     }
 
-    public void update() {
+    public void update(long deltaNanoTime) {
         for (Ant ant : ants) {
-            ant.update();
+            ant.update(deltaNanoTime);
         }
     }
 }

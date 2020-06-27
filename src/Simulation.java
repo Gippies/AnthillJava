@@ -14,7 +14,7 @@ public class Simulation {
         colony.paint(g);
     }
 
-    public void update() {
-        colony.update();
+    public void update(long deltaNanoTime) {
+        colony.update(deltaNanoTime);
     }
 }
