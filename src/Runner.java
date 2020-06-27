@@ -24,9 +24,9 @@ public class Runner extends JPanel {
         long endTime = System.nanoTime();
         while (true) {
             long deltaTime = Math.abs(System.nanoTime() - endTime);
+            endTime = System.nanoTime();
             runner.simulation.update(deltaTime);
             runner.repaint();
-            endTime = System.nanoTime();
         }
     }
 
