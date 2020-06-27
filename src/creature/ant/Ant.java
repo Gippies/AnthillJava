@@ -15,6 +15,7 @@ public class Ant implements GraphicComponent {
     private Vector2 velocity;
     private float speed;
     private Role role;
+    private State state;
     private double searchNanoseconds;
     private Random random;
 
@@ -24,6 +25,7 @@ public class Ant implements GraphicComponent {
         role = r;
         speed = s;
         random = new Random();
+        state = State.SEARCH;
         searchNanoseconds = random.nextDouble() * MAX_SEARCH_SECONDS * Math.pow(10, 9);
     }
 
@@ -33,6 +35,14 @@ public class Ant implements GraphicComponent {
     }
 
     public void update(long deltaNanoTime) {
+        if (state == State.SEARCH) {
+            search(deltaNanoTime);
+        }
+
+        position = position.add(velocity);
+    }
+
+    private void search(long deltaNanoTime) {
         searchNanoseconds -= deltaNanoTime;
         if (searchNanoseconds <= 0) {
             searchNanoseconds = random.nextDouble() * MAX_SEARCH_SECONDS * Math.pow(10, 9);
@@ -41,8 +51,5 @@ public class Ant implements GraphicComponent {
             Vector2 directionToGo = new Vector2(randX, randY).getNormalizedVector();
             velocity = directionToGo.mul(speed);
         }
-
-
-        position = position.add(velocity);
     }
 }
