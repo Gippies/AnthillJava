@@ -6,7 +6,7 @@ import java.awt.Graphics;
 
 public class Simulation {
 
-    private Colony colony;
+    private final Colony colony;
 
     public Simulation() {
         colony = new Colony();

@@ -14,10 +14,10 @@ public class Ant implements GraphicComponent {
     private Vector2 position;
     private Vector2 velocity;
     private float speed;
-    private Role role;
+    private final Role role;
     private State state;
     private double searchNanoseconds;
-    private Random random;
+    private final Random random;
 
     public Ant(Vector2 pos, Role r, float s) {
         position = pos;
